@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.support.design.widget.TextInputLayout
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,11 +15,11 @@ class MainActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
 
 
-        var mensagem = findViewById<TextInputLayout>(R.id.textoEnviado)
+        var mensagem = findViewById<EditText>(R.id.textoEnviado)
         var botaoEnviar = findViewById<Button>(R.id.button_first)
         botaoEnviar.setOnClickListener(
             View.OnClickListener {
-                exibeMensagem(mensagem.editText.toString())
+                exibeMensagem(mensagem.text.toString())
             })
 
 
